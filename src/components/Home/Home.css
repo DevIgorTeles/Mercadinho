@@ -1,0 +1,17 @@
+.nav-menu{
+    display: inline-block;
+}
+.UserInfo{
+    .UserAvatar{
+        width:40px;
+    }
+}
+#dropdown-basic{
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+    border-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));;
+    
+}
+.navBarContainer{
+    position: sticky;
+    top: 0;
+}

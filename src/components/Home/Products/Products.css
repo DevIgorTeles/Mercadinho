@@ -1,0 +1,11 @@
+.cardProduct{
+    width: 18rem;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content !important;
+    margin-top: 15px;
+    padding: 5px;
+    margin: 5px;
+}
