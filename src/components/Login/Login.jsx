@@ -5,6 +5,7 @@ import {URL} from '../../Utils'
 import {Bolacha} from '../../Cookies'
 import { ToastContainer, Toast } from "react-bootstrap";
 import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 
 
 
@@ -17,17 +18,18 @@ const Login = () => {
   const login = async (event, email, password )=>{
     try{
       event.preventDefault()
-      const RESOURCE_URL = `${URL.SERVER}:${URL.PORT}`
+      const RESOURCE_URL = `${URL.SERVER} : ${URL.PORT} /login`
       const result = await fetch(RESOURCE_URL, {
         method: 'POST',
         headers:{'Content-Type': 'application/json'}, 
-        body: { email, password }
+        body: JSON.stringify({ email, password })
       } )
       if(!result.ok){
       throw new Error('Credenciais Inválidas')  
       }
-      const jsonResult = result.toObject()
+      const jsonResult = await result.json()
       Bolacha.insert('token',jsonResult.token)
+      navigate('/home')
     }catch(error){
       toast.error('Credenciais Inválidas')
     }
