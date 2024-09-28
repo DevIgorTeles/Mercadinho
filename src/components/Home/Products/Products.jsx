@@ -1,74 +1,63 @@
 import React from "react";
 import "./Products.css";
-import { Button, Card, CardGroup, Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 
 const Products = () => {
   const products = [
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
     {
-      name: "Jogos PS2",
+      name: "GOD OF WAR",
       description: "Jogo de um deus da guerra buscando vingança",
       price: "R$10",
       image:
         "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
     },
-    {
-      name: "Jogos PS2",
-      description: "Jogo de um deus da guerra buscando vingança",
-      price: "R$10",
-      image:
-        "https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg",
-    },
+    
   ];
+
   const getCards = () => {
-    return products.map((products) => {
+    return products.map((product, index) => {
       return (
-        <Card className="cardProduct">
-          <Card.Img
-            variant="top"
-            src="https://acdn.mitiendanube.com/stores/001/626/035/products/829481c6ca2467390a06e4b3d71b8cf4-605bc96bd3e61cd98817246884791821-480-0.jpg"
-          />
+        <Card className="cardProduct" key={index}>
+          <Card.Img variant="top" src={product.image} />
           <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </Card.Text>
+            <Card.Title>{product.name}</Card.Title>
+            <Card.Text>{product.description}</Card.Text>
+            <Card.Text><strong>Preço: {product.price}</strong></Card.Text>
           </Card.Body>
           <Card.Footer>
             <Button variant="primary">Ver</Button>

@@ -1,6 +1,8 @@
 import {BrowserRouter as Router,Route, Routes, Navigate} from 'react-router-dom';
 import Login from '../../mercadinho/src/components/Login/Login';
 import Home from '../../mercadinho/src/components/Home/Home';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <Router>
