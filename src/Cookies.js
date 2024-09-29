@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie'
 export const Bolacha ={
     get:(key)=>{
-        Cookies.get(key)
+        return Cookies.get(key)
     },
     insert:(key,value) =>{
         Cookies.set(key,value)
