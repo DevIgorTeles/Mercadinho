@@ -151,8 +151,9 @@ const Products = () => {
 
       const response = await fetch(`${URL.SERVER}:${URL.PORT}/api/products/${code}/promotion`, {
         method: 'DELETE',
-        headers: { 
-          'Authorization': `Bearer ${token}`,
+        headers: {
+          'Content-Type': 'application/json', 
+          'Authorization': `Bearer ${token}`
         },
       });
 
