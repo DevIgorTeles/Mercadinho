@@ -54,7 +54,7 @@ const Home = () => {
       {view === 1 ? <View1 /> : ""}
       {view === 2 ? <View2 /> : ""}
       {view === 3 ? <View3 /> : ""}
-      <ToastContainer />
+      
     </>
   );
 };
